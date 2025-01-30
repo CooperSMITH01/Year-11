@@ -25,3 +25,6 @@ def play_game():
 
 if __name__ == "__main__":
     play_game()
+
+#  this version was created during a GitHub chat session with a user who wanted to add a hint to the game.
+#  it was also done with github chat to show that it works very well
