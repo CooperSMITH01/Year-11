@@ -7,14 +7,17 @@ def get_hint(low, high):
 
 def play_game():
     number = random.randint(1, 100)
+    low, high = 1, 100
     guess = None
     while guess != number:
         try:
-            guess = int(input("Guess a number: "))
+            guess = int(input(f"Guess a number between {low} and {high} (Hint: {get_hint(low, high)}): "))
             if guess < number:
                 print("Too low!")
+                low = guess + 1
             elif guess > number:
                 print("Too high!")
+                high = guess - 1
         except ValueError:
             print("Please enter a valid number.")
     print("YOU WIN!")
